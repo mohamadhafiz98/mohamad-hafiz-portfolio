@@ -13,7 +13,6 @@ Personal portfolio website built with Next.js to showcase my projects, skills, a
 - Project listing with dynamic project detail pages
 - Reusable component-based architecture
 - Clean and professional UI motion system with accessible reveal animations
-- Click-to-zoom project screenshots on project detail pages
 - Structured About page with work experience and education sections
 
 ## Theme
@@ -21,7 +20,7 @@ Personal portfolio website built with Next.js to showcase my projects, skills, a
 - Clean minimal portfolio theme
 - Warm neutral palette (off-white, soft gray, charcoal text)
 - Rounded card-based sections with subtle borders and soft shadows
-- Professional, understated motion (no neon/cyber visual style)
+- Professional, understated motion 
 
 ## Tech Stack
 
