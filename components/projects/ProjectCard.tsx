@@ -8,7 +8,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-[#e0e0dc] bg-[#ecece8] shadow-[0_8px_24px_rgba(17,17,17,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(17,17,17,0.06)]">
+    <article className="overflow-hidden rounded-2xl border border-[#e0e0dc] bg-[#ecece8] shadow-[0_8px_24px_rgba(17,17,17,0.04)] motion-ui hover:-translate-y-[0.5px] hover:shadow-[0_10px_28px_rgba(17,17,17,0.06)]">
       <Link
         href={`/projects/${project.slug}`}
         className="group flex h-48 w-full cursor-pointer items-center justify-center overflow-hidden bg-[#dfdfda]"
@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           alt={`${project.title} preview`}
           width={800}
           height={500}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          className="h-full w-full object-cover motion-ui group-hover:scale-[1.01]"
         />
       </Link>
 
@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.tech.map((tech) => (
             <li
               key={`${project.id}-${tech}`}
-              className="rounded-lg border border-[#d8d8d3] bg-[#f5f5f3] px-2.5 py-1 text-[10px] uppercase tracking-wider text-[#666666] transition-opacity duration-200 hover:opacity-75"
+              className="rounded-lg border border-[#d8d8d3] bg-[#f5f5f3] px-2.5 py-1 text-[10px] uppercase tracking-wider text-[#666666] motion-fast hover:opacity-80"
             >
               {tech}
             </li>
@@ -50,7 +50,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 rounded-xl border border-[#d8d8d3] bg-[#f5f5f3] py-2 text-center text-sm font-medium text-[#111111] transition-all duration-200 hover:-translate-y-0.5 hover:opacity-85"
+                className="flex-1 rounded-xl border border-[#d8d8d3] bg-[#f5f5f3] py-2 text-center text-sm font-medium text-[#111111] motion-ui hover:-translate-y-[0.5px] hover:opacity-85"
               >
                 GitHub
               </a>
@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 rounded-xl border border-[#d8d8d3] bg-[#f5f5f3] py-2 text-center text-sm font-medium text-[#111111] transition-all duration-200 hover:-translate-y-0.5 hover:opacity-85"
+                className="flex-1 rounded-xl border border-[#d8d8d3] bg-[#f5f5f3] py-2 text-center text-sm font-medium text-[#111111] motion-ui hover:-translate-y-[0.5px] hover:opacity-85"
               >
                 Live Demo
               </a>

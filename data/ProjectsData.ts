@@ -64,9 +64,40 @@ export const ProjectsData: Project[] = [
     github: null,
     demo: null,
   },
+  {
+    id: 3,
+    slug: "portfolio-clean-rebuild",
+    title: "Hafiz Portfolio",
+    description:
+      "A refined rebuild of my portfolio website with cleaner structure, improved mobile behavior, and reusable project components.",
+    longDescription:
+      "This website is my personal developer portfolio where I introduce myself, present my tech stack, and showcase selected projects with dedicated detail pages.",
+    overview:
+      "I rebuilt this version to make the UI cleaner and easier to scale. The homepage focuses on a clear personal introduction, the projects page highlights practical work, and the contact section gives direct ways to connect.",
+    features: [
+      "Responsive homepage with optimized hero layout for mobile and desktop",
+      "Structured tech stack section with grouped categories",
+      "Projects listing and dynamic slug-based project detail pages",
+      "Reusable components and typed project data for easier maintenance",
+    ],
+    challenges: [
+      "Keeping the design simple while still visually distinct",
+      "Organizing project content so adding new entries stays fast",
+      "Balancing visual polish with performance and readability",
+    ],
+    results: [
+      "Cleaner information hierarchy across all major sections",
+      "Improved maintainability through reusable components and typed models",
+      "Faster workflow for updating portfolio content and project entries",
+    ],
+    image: "/projects/clean-portfolio.png",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    visibility: "public",
+    github: "https://github.com/mohamadhafiz98/my-portfolio",
+    demo: "https://my-portfolio-rust-phi-62.vercel.app/",
+  },
 ];
 
 export function getProjectBySlug(slug: string) {
   return ProjectsData.find((project) => project.slug === slug);
 }
-

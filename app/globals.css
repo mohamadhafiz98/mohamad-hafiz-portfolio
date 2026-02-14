@@ -7,6 +7,10 @@
   --text-secondary: #666666;
   --border: #e0e0dc;
   --shadow-soft: 0 8px 24px rgba(17, 17, 17, 0.04);
+  --motion-fast: 320ms;
+  --motion-base: 420ms;
+  --motion-slow: 560ms;
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 html,
@@ -22,7 +26,131 @@ body {
 
 a,
 button {
-  transition: all 0.25s ease;
+  transition-timing-function: var(--ease-standard);
+}
+
+.motion-fast {
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-standard);
+}
+
+.motion-ui {
+  transition-duration: var(--motion-base);
+  transition-timing-function: var(--ease-standard);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition:
+    opacity var(--motion-slow) var(--ease-standard),
+    transform var(--motion-slow) var(--ease-standard);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  transform: translate3d(10px, 0, 0);
+}
+
+.reveal-right {
+  transform: translate3d(-10px, 0, 0);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.stagger-1 {
+  transition-delay: 90ms;
+}
+
+.stagger-2 {
+  transition-delay: 180ms;
+}
+
+.stagger-3 {
+  transition-delay: 270ms;
+}
+
+.stagger-4 {
+  transition-delay: 360ms;
+}
+
+.stagger-5 {
+  transition-delay: 450ms;
+}
+
+.stagger-6 {
+  transition-delay: 540ms;
+}
+
+.modal-overlay-enter {
+  animation: modal-overlay-in var(--motion-fast) var(--ease-standard);
+}
+
+.modal-panel-enter {
+  animation: modal-panel-in var(--motion-base) var(--ease-standard);
+}
+
+@keyframes modal-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-panel-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .stagger-1 {
+    transition-delay: 45ms;
+  }
+
+  .stagger-2 {
+    transition-delay: 90ms;
+  }
+
+  .stagger-3 {
+    transition-delay: 135ms;
+  }
+
+  .stagger-4 {
+    transition-delay: 180ms;
+  }
+
+  .stagger-5 {
+    transition-delay: 225ms;
+  }
+
+  .stagger-6 {
+    transition-delay: 270ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .modal-overlay-enter,
+  .modal-panel-enter {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0ms !important;
+  }
 }
 
 /* Modal Scrollbar */
