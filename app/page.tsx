@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -80,6 +81,17 @@ export default function Home() {
             </span>
             
           </h1>
+
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/faceHafiz.png"
+              alt="Mohamad Hafiz profile photo"
+              width={520}
+              height={640}
+              className="h-auto w-full max-w-[320px] md:max-w-[420px]"
+              priority
+            />
+          </div>
 
           <p className="mb-6 text-lg text-[#666666] md:text-xl">
             Software Developer
