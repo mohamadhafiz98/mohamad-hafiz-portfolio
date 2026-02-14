@@ -93,8 +93,8 @@ export const ProjectsData: Project[] = [
     image: "/projects/clean-portfolio.png",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"],
     visibility: "public",
-    github: "https://github.com/mohamadhafiz98/my-portfolio",
-    demo: "https://my-portfolio-rust-phi-62.vercel.app/",
+    github: "https://github.com/mohamadhafiz98/hafiz-portfolio",
+    demo: "https://hafiz-98-portfolio.vercel.app/",
   },
 ];
 

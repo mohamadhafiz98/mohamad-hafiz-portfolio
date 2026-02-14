@@ -4,15 +4,24 @@ Personal portfolio website built with Next.js to showcase my projects, skills, a
 
 ## Live Links
 
-- Live site: [https://my-portfolio-rust-phi-62.vercel.app/](https://my-portfolio-rust-phi-62.vercel.app/)
-- GitHub repo: [https://github.com/mohamadhafiz98/my-portfolio](https://github.com/mohamadhafiz98/my-portfolio)
+- Live site: [https://hafiz-98-portfolio.vercel.app/](https://hafiz-98-portfolio.vercel.app/)
+- GitHub repo: [https://github.com/mohamadhafiz98/hafiz-portfolio](https://github.com/mohamadhafiz98/hafiz-portfolio)
 
 ## Features
 
 - Responsive layout for desktop and mobile
 - Project listing with dynamic project detail pages
 - Reusable component-based architecture
-- Cyber/neon visual style with animated UI accents
+- Clean and professional UI motion system with accessible reveal animations
+- Click-to-zoom project screenshots on project detail pages
+- Structured About page with work experience and education sections
+
+## Theme
+
+- Clean minimal portfolio theme
+- Warm neutral palette (off-white, soft gray, charcoal text)
+- Rounded card-based sections with subtle borders and soft shadows
+- Professional, understated motion (no neon/cyber visual style)
 
 ## Tech Stack
 
@@ -56,7 +65,7 @@ types/        # Shared TypeScript types/interfaces
 
 ## Deployment
 
-This project is deployed on Vercel and connected to the `main` branch for automatic redeploys on push.
+This project is deployed on Vercel for automatic redeploys on push.
 
 ## Author
 
