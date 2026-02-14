@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f5f3;
+  --surface: #ecece8;
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --border: #e0e0dc;
+  --shadow-soft: 0 8px 24px rgba(17, 17, 17, 0.04);
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+body {
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+button {
+  transition: all 0.25s ease;
+}
+
+/* Modal Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cfcfc8;
+  border-radius: 10px;
+}
