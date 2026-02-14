@@ -15,7 +15,6 @@ const techSections: { title: string; items: TechItem[] }[] = [
       { name: "TypeScript", iconSrc: "https://img.icons8.com/color/48/typescript.png" },
       { name: "C#", iconSrc: "https://img.icons8.com/color/48/c-sharp-logo.png" },
       { name: "Python", iconSrc: "https://img.icons8.com/color/48/python--v1.png" },
-      { name: "PHP", iconSrc: "https://img.icons8.com/officel/48/php-logo.png" },
       { name: "SQL", iconSrc: "https://img.icons8.com/color/48/sql.png" },
     ],
   },
@@ -82,6 +81,15 @@ Junior Software Developer experienced in mobile, web, and desktop applications. 
                   motion-ui hover:-translate-y-[0.5px] hover:bg-[#ecece8]"
                 >
                   Contact Me
+                </a>
+
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="rounded-xl border border-[#e0e0dc] bg-transparent px-8 py-3 text-[#111111]
+                  motion-ui hover:-translate-y-[0.5px] hover:bg-[#ecece8]"
+                >
+                  Download Resume
                 </a>
               </div>
             </Reveal>
