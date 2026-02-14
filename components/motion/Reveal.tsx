@@ -49,17 +49,18 @@ export default function Reveal({
     const onPreferenceChange = (event: MediaQueryListEvent) => {
       setReducedMotion(event.matches);
     };
-    const onLegacyPreferenceChange = (event: MediaQueryListEvent) => {
-      setReducedMotion(event.matches);
+    const legacyMediaQuery = mediaQuery as MediaQueryList & {
+      addListener?: (listener: (this: MediaQueryList, ev: MediaQueryListEvent) => void) => void;
+      removeListener?: (listener: (this: MediaQueryList, ev: MediaQueryListEvent) => void) => void;
     };
 
-    if ("addEventListener" in mediaQuery) {
+    if (typeof mediaQuery.addEventListener === "function") {
       mediaQuery.addEventListener("change", onPreferenceChange);
       return () => mediaQuery.removeEventListener("change", onPreferenceChange);
     }
 
-    mediaQuery.addListener(onLegacyPreferenceChange);
-    return () => mediaQuery.removeListener(onLegacyPreferenceChange);
+    legacyMediaQuery.addListener?.(onPreferenceChange);
+    return () => legacyMediaQuery.removeListener?.(onPreferenceChange);
   }, []);
 
   useEffect(() => {
@@ -110,7 +111,13 @@ export default function Reveal({
     .join(" ");
 
   return (
-    <Component ref={ref} className={composedClassName} {...rest}>
+    <Component
+      ref={(node) => {
+        ref.current = node as HTMLElement | null;
+      }}
+      className={composedClassName}
+      {...rest}
+    >
       {children}
     </Component>
   );
