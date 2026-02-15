@@ -60,6 +60,16 @@ export default function AboutPage() {
         <Reveal as="div" delay={1} className="mb-20 mt-12 text-center">
           <h1 className="text-4xl font-semibold tracking-wide md:text-5xl">Mohamad Hafiz</h1>
           <p className="mt-4 text-[#666666]">Software Developer</p>
+          <div className="mt-6">
+            <a
+              href="/Resume%20Mohamad%20Hafiz%20bin%20Abu%20Osman_.pdf"
+              download
+              className="inline-flex rounded-xl border border-[#e0e0dc] bg-transparent px-8 py-3 text-[#111111] motion-ui hover:-translate-y-[0.5px] hover:bg-[#ecece8]"
+            >
+              Download Resume
+            </a>
+          </div>
+          
         </Reveal>
 
         <Reveal
