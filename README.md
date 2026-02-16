@@ -4,7 +4,7 @@ Personal portfolio website built with Next.js to showcase my projects, skills, a
 
 ## Live Links
 
-- Live site: [[https:/mohamad-hafiz-portfolio.vercel.app/](mohamad-hafiz-portfolio.vercel.app) ]
+- Live site: [https:/mohamad-hafiz-portfolio.vercel.app/](mohamad-hafiz-portfolio.vercel.app) 
 - GitHub repo: [https://github.com/mohamadhafiz98/hafiz-portfolio](https://github.com/mohamadhafiz98/hafiz-portfolio)
 
 ## Features
