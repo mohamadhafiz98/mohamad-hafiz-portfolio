@@ -29,8 +29,8 @@ export const ProjectsData: Project[] = [
     image: "/projects/portfolio-website.png",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     visibility: "public",
-    github: "https://github.com/mohamadhafiz98/hafiz-portfolio",
-    demo: "https://hafiz-98-portfolio.vercel.app/",
+    github: "https://github.com/mohamadhafiz98/my-portfolio",
+    demo: "https://my-portfolio-rust-phi-62.vercel.app/",
   },
   {
     id: 2,
@@ -94,7 +94,7 @@ export const ProjectsData: Project[] = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"],
     visibility: "public",
     github: "https://github.com/mohamadhafiz98/hafiz-portfolio",
-    demo: "https://hafiz-98-portfolio.vercel.app/",
+    demo: "https://mohamad-hafiz-portfolio.vercel.app/",
   },
 ];
 
