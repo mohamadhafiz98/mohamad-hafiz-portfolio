@@ -1,6 +1,5 @@
 import Link from "next/link";
 import ProjectsGrid from "@/components/projects/ProjectsGrid";
-import ProjectsHeader from "@/components/projects/ProjectsHeader";
 import { ProjectsData } from "@/data/ProjectsData";
 import Reveal from "@/components/motion/Reveal";
 
@@ -16,7 +15,12 @@ export default function Projects() {
             Back to Home
           </Link>
         </Reveal>
-        <ProjectsHeader />
+        <Reveal as="div" className="mb-14 text-center">
+          <h1 className="mb-4 pb-1 text-4xl font-semibold leading-[1.15] tracking-wide md:text-5xl">
+            Projects
+          </h1>
+          <p className="text-[#666666]">Recent work and design prototypes</p>
+        </Reveal>
         <ProjectsGrid projects={ProjectsData} />
       </div>
     </div>

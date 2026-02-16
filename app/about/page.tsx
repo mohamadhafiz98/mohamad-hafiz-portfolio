@@ -64,7 +64,7 @@ export default function AboutPage() {
             <a
               href="/Resume%20Mohamad%20Hafiz%20bin%20Abu%20Osman_.pdf"
               download
-              className="inline-flex rounded-xl border border-[#e0e0dc] bg-transparent px-8 py-3 text-[#111111] motion-ui hover:-translate-y-[0.5px] hover:bg-[#ecece8]"
+              className="inline-flex rounded-xl border border-[#e0e0dc] bg-transparent px-8 py-3 text-[#111111] motion-ui resume-pulse-strong hover:-translate-y-[0.5px] hover:bg-[#ecece8]"
             >
               Download Resume
             </a>

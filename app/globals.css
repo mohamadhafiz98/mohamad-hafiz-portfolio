@@ -39,6 +39,25 @@ button {
   transition-timing-function: var(--ease-standard);
 }
 
+.resume-pulse-strong {
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 6px 14px rgba(17, 17, 17, 0.08);
+  animation: resume-pulse-core 1.5s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+.resume-pulse-strong::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid rgba(17, 17, 17, 0.34);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  animation: resume-pulse-ring 1.5s ease-out infinite;
+}
+
 .reveal {
   opacity: 0;
   transform: translate3d(0, 12px, 0);
@@ -113,6 +132,37 @@ button {
   }
 }
 
+@keyframes resume-pulse-core {
+  0% {
+    box-shadow: 0 6px 14px rgba(17, 17, 17, 0.08);
+  }
+
+  50% {
+    box-shadow: 0 10px 22px rgba(17, 17, 17, 0.15);
+  }
+
+  100% {
+    box-shadow: 0 6px 14px rgba(17, 17, 17, 0.08);
+  }
+}
+
+@keyframes resume-pulse-ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+
+  75% {
+    opacity: 0;
+    transform: scale(1.16);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
 @media (max-width: 767px) {
   .stagger-1 {
     transition-delay: 45ms;
@@ -143,6 +193,7 @@ button {
   .reveal,
   .reveal-left,
   .reveal-right,
+  .resume-pulse-strong,
   .modal-overlay-enter,
   .modal-panel-enter {
     animation: none !important;
@@ -150,6 +201,12 @@ button {
     transform: none !important;
     transition: none !important;
     transition-delay: 0ms !important;
+  }
+
+  .resume-pulse-strong::after {
+    animation: none !important;
+    opacity: 0 !important;
+    transform: none !important;
   }
 }
 
