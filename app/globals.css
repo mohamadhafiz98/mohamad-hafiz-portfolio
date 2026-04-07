@@ -41,21 +41,25 @@ button {
 
 .resume-pulse-strong {
   position: relative;
-  isolation: isolate;
-  box-shadow: 0 6px 14px rgba(17, 17, 17, 0.08);
-  animation: resume-pulse-core 1.5s ease-in-out infinite;
-  will-change: box-shadow;
+  overflow: hidden;
 }
 
 .resume-pulse-strong::after {
   content: "";
   position: absolute;
-  inset: -4px;
-  border: 2px solid rgba(17, 17, 17, 0.34);
-  border-radius: inherit;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(17, 17, 17, 0.07) 50%,
+    transparent
+  );
+  transform: skewX(-15deg);
+  animation: resume-shimmer 3.2s ease-in-out infinite;
   pointer-events: none;
-  z-index: -1;
-  animation: resume-pulse-ring 1.5s ease-out infinite;
 }
 
 .reveal {
@@ -132,34 +136,18 @@ button {
   }
 }
 
-@keyframes resume-pulse-core {
+@keyframes resume-shimmer {
   0% {
-    box-shadow: 0 6px 14px rgba(17, 17, 17, 0.08);
+    left: -80%;
+    opacity: 1;
   }
-
-  50% {
-    box-shadow: 0 10px 22px rgba(17, 17, 17, 0.15);
+  55% {
+    left: 130%;
+    opacity: 1;
   }
-
-  100% {
-    box-shadow: 0 6px 14px rgba(17, 17, 17, 0.08);
-  }
-}
-
-@keyframes resume-pulse-ring {
-  0% {
-    opacity: 0.9;
-    transform: scale(1);
-  }
-
-  75% {
+  56%, 100% {
+    left: 130%;
     opacity: 0;
-    transform: scale(1.16);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1.2);
   }
 }
 
@@ -206,7 +194,6 @@ button {
   .resume-pulse-strong::after {
     animation: none !important;
     opacity: 0 !important;
-    transform: none !important;
   }
 }
 

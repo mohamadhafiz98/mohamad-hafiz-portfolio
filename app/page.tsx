@@ -4,43 +4,37 @@ import Reveal from "@/components/motion/Reveal";
 
 type TechItem = {
   name: string;
-  iconSrc: string;
+  iconSrc?: string;
 };
 
 const techSections: { title: string; items: TechItem[] }[] = [
   {
-    title: "Programming",
+    title: "Core Technologies",
     items: [
-      { name: "JavaScript", iconSrc: "https://img.icons8.com/color/48/javascript--v1.png" },
-      { name: "TypeScript", iconSrc: "https://img.icons8.com/color/48/typescript.png" },
-      { name: "C#", iconSrc: "https://img.icons8.com/color/48/c-sharp-logo.png" },
-      { name: "Python", iconSrc: "https://img.icons8.com/color/48/python--v1.png" },
-      { name: "SQL", iconSrc: "https://img.icons8.com/color/48/sql.png" },
-    ],
-  },
-  {
-    title: "Frontend",
-    items: [
-      { name: "React", iconSrc: "https://img.icons8.com/officel/48/react.png" },
       { name: "React Native", iconSrc: "https://img.icons8.com/color/48/react-native.png" },
-      { name: "Next.js", iconSrc: "https://img.icons8.com/fluency/48/nextjs.png" },
-      { name: "Tailwind", iconSrc: "https://img.icons8.com/color/48/tailwindcss.png" },
-      { name: "WordPress", iconSrc: "https://img.icons8.com/color/48/wordpress.png" },
-    ],
-  },
-  {
-    title: "Backend",
-    items: [
-      { name: "SQL Server", iconSrc: "https://img.icons8.com/color/48/microsoft-sql-server.png" },
+      { name: "JavaScript", iconSrc: "https://img.icons8.com/color/48/javascript--v1.png" },
+      { name: "HTML", iconSrc: "https://img.icons8.com/color/48/html-5--v1.png" },
+      { name: "CSS", iconSrc: "https://img.icons8.com/color/48/css3.png" },
       { name: "MySQL", iconSrc: "https://img.icons8.com/color/48/mysql-logo.png" },
     ],
   },
   {
-    title: "Tools",
+    title: "Frameworks & Tools",
     items: [
-      { name: "Git", iconSrc: "https://img.icons8.com/color/48/git.png" },
-      { name: "GitHub", iconSrc: "https://img.icons8.com/ios-glyphs/48/github.png" },
-      { name: "VS Code", iconSrc: "https://img.icons8.com/color/48/visual-studio-code-2019.png" },
+      { name: "Photoshop", iconSrc: "https://img.icons8.com/color/48/adobe-photoshop.png" },
+      { name: "Illustrator", iconSrc: "https://img.icons8.com/color/48/adobe-illustrator.png" },
+      { name: "WordPress", iconSrc: "https://img.icons8.com/color/48/wordpress.png" },
+    ],
+  },
+  {
+    title: "Familiar Technologies",
+    items: [
+      { name: "VB.NET" },
+      { name: "C#", iconSrc: "https://img.icons8.com/color/48/c-sharp-logo.png" },
+      { name: "PHP", iconSrc: "https://img.icons8.com/offices/48/php-logo.png" },
+      { name: "Python", iconSrc: "https://img.icons8.com/color/48/python--v1.png" },
+      { name: "Figma", iconSrc: "https://img.icons8.com/color/48/figma--v1.png" },
+      { name: "SQL Server", iconSrc: "https://img.icons8.com/color/48/microsoft-sql-server.png" },
     ],
   },
 ];
@@ -140,14 +134,16 @@ Junior Software Developer experienced in mobile, web, and desktop applications. 
                       key={item.name}
                       className="inline-flex items-center gap-2 rounded-lg border border-[#dddcd7] bg-[#f9f9f7] px-3 py-2 text-sm text-[#111111] motion-fast hover:border-[#cfcfc8] hover:opacity-90"
                     >
-                      <img
-                        src={item.iconSrc}
-                        alt={`${item.name} icon`}
-                        width={18}
-                        height={18}
-                        className="h-[18px] w-[18px] object-contain"
-                        loading="lazy"
-                      />
+                      {item.iconSrc && (
+                        <img
+                          src={item.iconSrc}
+                          alt={`${item.name} icon`}
+                          width={18}
+                          height={18}
+                          className="h-[18px] w-[18px] object-contain"
+                          loading="lazy"
+                        />
+                      )}
                       {item.name}
                     </span>
                   ))}

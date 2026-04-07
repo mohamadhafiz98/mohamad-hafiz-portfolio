@@ -3,43 +3,43 @@ import Link from "next/link";
 
 const jobs = [
   {
-    title: "Junior Mobile Application Developer (Protege)",
+    title: "Junior Mobile Application Developer (Protégé)",
     company: "D'amante(M) Sdn Bhd",
-    period: "May 2024 - December 2024",
+    period: "May 2024 – December 2024",
     points: [
-      "Converted web system into mobile app using React Native.",
-      "Designed and implemented user-friendly mobile applications.",
-      "Maintained and improved existing applications.",
+      "Converted and integrated a web system into a mobile application using React Native, improving accessibility and user experience.",
+      "Designed, developed, and implemented mobile applications using React Native, ensuring intuitive and user-friendly interfaces.",
+      "Provided on-site technical support for LED billboard systems in Putrajaya, including monitoring, troubleshooting, and maintenance to ensure optimal display performance.",
     ],
   },
   {
-    title: "Software Engineer (Protege)",
+    title: "Software Engineer (Protégé)",
     company: "Datasonic Corporation Sdn Bhd",
-    period: "July 2023 - March 2024",
+    period: "July 2023 – March 2024",
     points: [
-      "Supported in-house production systems.",
-      "Developed file processing system using C# & SQL Server.",
-      "Performed database querying and manipulation.",
+      "Provided support and maintenance for in-house systems in production environments, troubleshooted issues, and implemented necessary updates.",
+      "Developed a file processing system using C# and SQL Server Management Studio, aimed at automatically categorizing and processing files based on database records.",
+      "Utilized Microsoft SQL Server Management Studio for basic database administration tasks, including data querying, manipulation, and basic maintenance.",
     ],
   },
   {
     title: "Website Designer (Internship)",
     company: "Veecotech Web & Ecommerce",
-    period: "March 2022 - August 2022",
+    period: "March 2022 – August 2022",
     points: [
-      "Built responsive websites using WordPress.",
-      "Optimized layouts with media queries.",
-      "Collaborated with UX team for better UI experience.",
+      "Implemented and optimized media queries for seamless responsive design across devices.",
+      "Designed, developed, and handled website maintenance using WordPress.",
+      "Collaborated with designers and UX team to create visually appealing and user-friendly websites.",
     ],
   },
   {
     title: "IT Support (Internship)",
-    company: "A Tu Z Wedding House",
-    period: "July 2018 - December 2018",
+    company: "A Tu Z Wedding House Sdn Bhd",
+    period: "July 2018 – December 2018",
     points: [
-      "Edited product images using Photoshop.",
-      "Designed promotional materials in Illustrator.",
-      "Managed company social media platforms.",
+      "Edited and enhanced product images using Adobe Photoshop.",
+      "Designed promotional materials, including banners and catalogs, utilizing Adobe Illustrator.",
+      "Managed social media accounts for the organization, including Facebook and Instagram.",
     ],
   },
 ];
@@ -177,7 +177,12 @@ export default function AboutPage() {
                 <h3 className="text-lg font-medium text-[#111111]">Bachelor of Computer Science (Artificial Intelligence)</h3>
                 <span className="text-sm text-[#666666]">2019 - 2022</span>
               </div>
-              <p className="text-[#666666]">Universiti Teknikal Malaysia Melaka</p>
+              <p className="mb-3 text-[#666666]">Universiti Teknikal Malaysia Melaka</p>
+              <ul className="ml-6 list-disc space-y-2 text-[#666666]">
+                <li>Committee Member in ASiiC Club.</li>
+                <li>Participated as a Committee Member in the Melaka Smart River Challenge event.</li>
+                <li>Served as a Committee Member for the UTeMX 2021 event.</li>
+              </ul>
             </div>
 
             <div>
@@ -185,7 +190,11 @@ export default function AboutPage() {
                 <h3 className="text-lg font-medium text-[#111111]">Diploma in Digital Technology</h3>
                 <span className="text-sm text-[#666666]">2016 - 2018</span>
               </div>
-              <p className="text-[#666666]">Politeknik Balik Pulau</p>
+              <p className="mb-3 text-[#666666]">Politeknik Balik Pulau</p>
+              <ul className="ml-6 list-disc space-y-2 text-[#666666]">
+                <li>Anugerah Ketua Pengarah graduated with CGPA 3.71.</li>
+                <li>Top 10 in Final Year Project Competition (Project Title: Networking Augmented Reality).</li>
+              </ul>
             </div>
           </div>
         </Reveal>
